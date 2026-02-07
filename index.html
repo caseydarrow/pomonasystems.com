@@ -14,6 +14,7 @@
     :root {
       --bg: #0f172a;
       --panel: #111827;
+      --header: #0b1220;   /* darker, guaranteed contrast */
       --text: #e5e7eb;
       --muted: #9ca3af;
       --border: #1f2933;
@@ -42,21 +43,32 @@
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 1.75rem 2rem 2.5rem;
+      overflow: hidden; /* important */
       text-align: center;
     }
 
+    .header {
+      background: var(--header);
+      padding: 1.75rem 2rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
     .logo {
-      max-width: 520px; /* bigger */
+      max-width: 520px;
       width: 100%;
       height: auto;
-      margin-bottom: 0.75rem; /* tighter */
+      display: block;
+      margin: 0 auto;
+    }
+
+    .content {
+      padding: 1.75rem 2rem 2.25rem;
     }
 
     h1 {
       font-size: 1.25rem;
       font-weight: 600;
-      margin: 0 0 0.75rem 0; /* pulled closer */
+      margin: 0 0 0.75rem 0;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
@@ -90,12 +102,16 @@
     }
 
     @media (max-width: 480px) {
-      .card {
-        padding: 1.5rem 1.25rem 2rem;
+      .header {
+        padding: 1.5rem 1.25rem 1rem;
       }
 
       .logo {
         max-width: 360px;
+      }
+
+      .content {
+        padding: 1.5rem 1.25rem 2rem;
       }
     }
   </style>
@@ -105,34 +121,38 @@
 
   <div class="card">
 
-    <img
-      src="/logo-horizontal-white.png"
-      alt="Pomona Systems logo"
-      class="logo"
-    />
-
-    <h1>Coming Soon</h1>
-
-    <p>
-      Pomona Systems is developing industrial instrumentation for
-      oxygen and carbon dioxide monitoring, data logging, and control
-      in controlled-atmosphere storage and process environments.
-    </p>
-
-    <p>
-      Our focus is on reliability, clarity, and systems designed for
-      real-world agricultural and industrial use.
-    </p>
-
-    <div class="contact">
-      <a href="mailto:casey@pomonasystems.com">
-        casey@pomonasystems.com
-      </a>
+    <div class="header">
+      <img
+        src="logo-horizontal-white.png"
+        alt="Pomona Systems logo"
+        class="logo"
+      />
     </div>
 
-    <footer>
-      © <span id="year"></span> Pomona Systems LLC
-    </footer>
+    <div class="content">
+      <h1>Coming Soon</h1>
+
+      <p>
+        Pomona Systems is developing industrial instrumentation for
+        oxygen and carbon dioxide monitoring, data logging, and control
+        in controlled-atmosphere storage and process environments.
+      </p>
+
+      <p>
+        Our focus is on reliability, clarity, and systems designed for
+        real-world agricultural and industrial use.
+      </p>
+
+      <div class="contact">
+        <a href="mailto:casey@pomonasystems.com">
+          casey@pomonasystems.com
+        </a>
+      </div>
+
+      <footer>
+        © <span id="year"></span> Pomona Systems LLC
+      </footer>
+    </div>
 
   </div>
 
