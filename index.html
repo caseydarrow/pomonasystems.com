@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pomona Systems LLC</title>
+
+  <meta
+    name="description"
+    content="Pomona Systems designs and builds industrial gas monitoring and control systems for controlled-atmosphere storage and process environments."
+  />
+
+  <style>
+    :root {
+      --bg: #0f172a;      /* deep slate */
+      --panel: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2933;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      max-width: 640px;
+      width: 100%;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 420px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--muted);
+      padding-bottom: 2px;
+    }
+
+    a:hover {
+      border-bottom-color: var(--text);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <!-- Replace with SVG later by changing the filename -->
+    <img
+      src="logo-horizontal-white.png"
+      alt="Pomona Systems logo"
+      class="logo"
+    />
+
+    <h1>Coming Soon</h1>
+
+    <p>
+      Pomona Systems is developing industrial instrumentation for
+      oxygen and carbon dioxide monitoring, data logging, and control
+      in controlled-atmosphere storage and process environments.
+    </p>
+
+    <p>
+      Our focus is on reliability, clarity, and systems designed for
+      real-world agricultural and industrial use — not lab demos.
+    </p>
+
+    <div class="contact">
+      Contact:
+      <br />
+      <a href="mailto:casey@pomonasystems.com">
+        casey@pomonasystems.com
+      </a>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Pomona Systems LLC
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
