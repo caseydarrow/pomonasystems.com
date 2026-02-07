@@ -12,7 +12,7 @@
 
   <style>
     :root {
-      --bg: #0f172a;      /* deep slate */
+      --bg: #0f172a;
       --panel: #111827;
       --text: #e5e7eb;
       --muted: #9ca3af;
@@ -33,7 +33,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem;
     }
 
     .card {
@@ -42,33 +42,33 @@
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 2.5rem 2rem;
+      padding: 1.75rem 2rem 2.5rem;
       text-align: center;
     }
 
     .logo {
-      max-width: 420px;
+      max-width: 520px; /* bigger */
       width: 100%;
       height: auto;
-      margin-bottom: 2rem;
+      margin-bottom: 0.75rem; /* tighter */
     }
 
     h1 {
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       font-weight: 600;
-      margin-bottom: 1rem;
-      letter-spacing: 0.04em;
+      margin: 0 0 0.75rem 0; /* pulled closer */
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
     }
 
     p {
       line-height: 1.6;
-      margin-bottom: 1.5rem;
+      margin: 0.75rem 0;
     }
 
     .contact {
-      margin-top: 2rem;
+      margin-top: 1.75rem;
       font-size: 1rem;
     }
 
@@ -84,14 +84,18 @@
     }
 
     footer {
-      margin-top: 2rem;
+      margin-top: 1.75rem;
       font-size: 0.85rem;
       color: var(--muted);
     }
 
     @media (max-width: 480px) {
       .card {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1.25rem 2rem;
+      }
+
+      .logo {
+        max-width: 360px;
       }
     }
   </style>
@@ -101,9 +105,8 @@
 
   <div class="card">
 
-    <!-- Replace with SVG later by changing the filename -->
     <img
-      src="logo-horizontal-white.png"
+      src="/logo-horizontal-white.png"
       alt="Pomona Systems logo"
       class="logo"
     />
@@ -118,12 +121,10 @@
 
     <p>
       Our focus is on reliability, clarity, and systems designed for
-      real-world agricultural and industrial use — not lab demos.
+      real-world agricultural and industrial use.
     </p>
 
     <div class="contact">
-      Contact:
-      <br />
       <a href="mailto:casey@pomonasystems.com">
         casey@pomonasystems.com
       </a>
